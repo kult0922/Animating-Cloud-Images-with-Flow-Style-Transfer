@@ -137,7 +137,6 @@ for epoch in range(opt.startEpoch, opt.epochs):
             print('[%d/%d][%d/%d]  Loss_D: %.4f  Loss_G: %.4f  L1loss: %.4f' % (epoch + 1, opt.epochs, i, len(train_loader), errD.item(), errG.item(), errL1.item()))
 
         iters += 1
-        break
 
     # make save dirs
     out_test_demo_path = os.path.join('./checkpoints/', opt.checkpoint, 'video', 'epoch_' + str(epoch + 1), 'test')
@@ -170,4 +169,3 @@ for epoch in range(opt.startEpoch, opt.epochs):
     print('---TIME---')
     print('%d hour %d minute' % (hour_minute_time[0], hour_minute_time[1] / 60))
 
-print('###################### END ##########################')

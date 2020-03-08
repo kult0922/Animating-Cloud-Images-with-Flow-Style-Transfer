@@ -44,8 +44,18 @@ def cal_optical_flow(data, color=False):
     # tensor format
     flow_data = flow_data.transpose(0, 4, 1, 2, 3)
     flow_data = flow_data.astype(np.float32)
-    ## reglalization [-1, 1]
-    flow_data = flow_data / flow_data.shape[-1]
+
+    if color:
+        ## reglalization [-1, 1]
+        mini = flow_data.min()
+        maxi = flow_data.max()
+        flow_data = flow_data - mini
+        flow_data = flow_data / (maxi - mini) * 2 - 1
+
+    else:
+        ## reglalization [-1, 1]
+        flow_data = flow_data / flow_data.shape[-1]
+
     return torch.from_numpy(flow_data)
 
 def make_G_input(video, flow, num_frames):

@@ -23,7 +23,6 @@ def make_dataloader(opt):
                            ])
                          )
 
-
     print('trainset size ' + str(len(trainset)))
     print('testset size ' + str(len(testset)))
 
