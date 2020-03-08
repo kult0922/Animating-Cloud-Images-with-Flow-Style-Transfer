@@ -6,3 +6,23 @@
 </tr>
 </table>
 
+## Installation
+We support '''Python3'''. To install the dependenceis run:
+'''
+pip install -r requirements.txt
+'''
+
+## Demo
+'''
+python3 demo.py --sourceImage path to source image --drivingVideo path to driving video dir
+'''
+
+## Motion Transfer
+'''
+pip install -r requirements.txt
+'''
+
+## Video Reconstruction
+'''
+pip install -r requirements.txt
+'''

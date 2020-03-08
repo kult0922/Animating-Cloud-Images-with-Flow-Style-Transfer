@@ -13,15 +13,10 @@ import torchvision.datasets as dset
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
 import numpy as np
-import matplotlib
-matplotlib.use('Agg') # -----(1)
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import time
 from PIL import ImageFile
 from PIL import Image
 
-#from video_folder import VideoFolder
 from torch.utils.data import DataLoader
 from options.test_options import TestOptions
 from data.dataloader import make_dataloader
@@ -47,8 +42,6 @@ netG = Generator().to(device)
 if (device.type == 'cuda') and (opt.ngpu > 1):
     netG = nn.DataParallel(netG, list(range(opt.ngpu)))
 print(netG)
-
-###################### TEST #########################
 
 # load  model
 netG.load_state_dict(torch.load(G_path))

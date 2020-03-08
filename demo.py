@@ -13,15 +13,9 @@ import torchvision.datasets as dset
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
 import numpy as np
-import matplotlib
-matplotlib.use('Agg') # -----(1)
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import time
 from PIL import ImageFile
 from PIL import Image
-
-#from video_folder import VideoFolder
 from torch.utils.data import DataLoader
 from models.model import Generator, Discriminator
 from utils.utils import cal_optical_flow, weights_init, make_G_input, make_D_input, save_video
@@ -86,7 +80,7 @@ with torch.no_grad():
 
     source_img_name = os.path.basename(opt.sourceImage)
     driving_video_name = os.path.basename(opt.drivingVideo)
-    out_test_path = os.path.join('./checkpoints', opt.checkpoint, 'test', source_img_name + '-' + driving_video_name)
+    out_test_path = os.path.join('./checkpoints', opt.checkpoint, 'test', source_img_name + '-' + ariving_video_name)
     os.makedirs(out_test_path, exist_ok=True)
 
     # save output
