@@ -7,22 +7,28 @@
 </table>
 
 ## Installation
+
 We support ```Python3```. To install the dependenceis run:
+
 ```
 pip install -r requirements.txt
+```
+## train
+```
+python3 train.py
 ```
 
 ## Demo
 ```
-python3 demo.py --sourceImage path to source image --drivingVideo path to driving video dir
+python3 demo.py --checkpoint path/to/checkpoint --startEpoch 20 --sourceImage path/to/source_image --drivingVideo path/to/driving_video_dir
 ```
 
 ## Motion Transfer
 ```
-pip install -r requirements.txt
+python3 test.py --mode transfer --batchSize 8 --checkpoint path/to/checkpoint --startEpoch 20 --sourceImage path/to/source_image --drivingVideo path/to/driving_video_dir
 ```
 
 ## Video Reconstruction
 ```
-pip install -r requirements.txt
+python3 test.py --mode reconstruction --batchSize 8 --checkpoint path/to/checkpoint --startEpoch 20 --sourceImage path/to/source_image --drivingVideo path/to/driving_video_dir
 ```

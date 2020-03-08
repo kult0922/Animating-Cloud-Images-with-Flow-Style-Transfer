@@ -80,7 +80,7 @@ with torch.no_grad():
 
     source_img_name = os.path.basename(opt.sourceImage)
     driving_video_name = os.path.basename(opt.drivingVideo)
-    out_test_path = os.path.join('./checkpoints', opt.checkpoint, 'test', source_img_name + '-' + ariving_video_name)
+    out_test_path = os.path.join('./checkpoints', opt.checkpoint, 'test', source_img_name + '-' + driving_video_name)
     os.makedirs(out_test_path, exist_ok=True)
 
     # save output
