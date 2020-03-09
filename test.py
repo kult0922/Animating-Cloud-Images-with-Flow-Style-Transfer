@@ -21,7 +21,7 @@ from torch.utils.data import DataLoader
 from options.test_options import TestOptions
 from data.dataloader import make_dataloader
 from models.model import Generator, Discriminator
-from utils.utils import cal_optical_flow, weights_init, make_G_input, make_D_input, save_video
+from utils.utils import calc_optical_flow, weights_init, make_G_input, make_D_input, save_video
 
 opt = TestOptions().parse()
 
@@ -57,8 +57,8 @@ if opt.mode == 'transfer':
 
     for i, testdata in enumerate(valid_loader, 0):
         driving_video = testdata[0].to(device)
-        optical_flow = cal_optical_flow(testdata[0]).to(device)
-        optical_flow_color = cal_optical_flow(testdata[0], color=True).to(device)
+        optical_flow = calc_optical_flow(testdata[0]).to(device)
+        optical_flow_color = calc_optical_flow(testdata[0], color=True).to(device)
         break
 
 if opt.mode == 'reconstruction':
@@ -67,8 +67,8 @@ if opt.mode == 'reconstruction':
         driving_video = testdata[0].to(device)
         source_image = source_image[:,:,0,:,:]
         source_image = source_image.unsqueeze(2).repeat(1, 1, opt.nframes, 1, 1)
-        optical_flow = cal_optical_flow(testdata[0]).to(device)
-        optical_flow_color = cal_optical_flow(testdata[0], color=True).to(device)
+        optical_flow = calc_optical_flow(testdata[0]).to(device)
+        optical_flow_color = calc_optical_flow(testdata[0], color=True).to(device)
         break
 
 netG.eval()

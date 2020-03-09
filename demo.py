@@ -18,7 +18,7 @@ from PIL import ImageFile
 from PIL import Image
 from torch.utils.data import DataLoader
 from models.model import Generator, Discriminator
-from utils.utils import cal_optical_flow, weights_init, make_G_input, make_D_input, save_video
+from utils.utils import calc_optical_flow, weights_init, make_G_input, make_D_input, save_video
 from options.test_options import TestOptions
 from data.dataloader import make_test_dataloader
 
@@ -68,8 +68,8 @@ source_image = source_image.unsqueeze(1).unsqueeze(0).repeat(1, 1, num_frame, 1,
 # driving video
 for i, testdata in enumerate(driving_video_loader, 0):
     driving_video = testdata[0].to(device)
-    driving_flow = cal_optical_flow(testdata[0]).to(device)
-    optical_flow_color = cal_optical_flow(testdata[0], color=True).to(device)
+    driving_flow = calc_optical_flow(testdata[0]).to(device)
+    optical_flow_color = calc_optical_flow(testdata[0], color=True).to(device)
     break
 
 netG.eval()

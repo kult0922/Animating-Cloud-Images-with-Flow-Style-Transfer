@@ -5,7 +5,7 @@ import torch.nn as nn
 import torchvision.utils as vutils
 import os
 
-def cal_optical_flow(data, color=False):
+def calc_optical_flow(data, color=False):
     data = data.numpy().transpose(0, 2, 3, 4, 1)
     if (color):
         flow_data = np.zeros_like(data)

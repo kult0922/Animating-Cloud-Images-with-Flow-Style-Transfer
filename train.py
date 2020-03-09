@@ -19,7 +19,7 @@ from PIL import Image
 
 from torch.utils.data import DataLoader
 from models.model import Generator, Discriminator
-from utils.utils import cal_optical_flow, weights_init, make_G_input, make_D_input, save_video
+from utils.utils import calc_optical_flow, weights_init, make_G_input, make_D_input, save_video
 from options.train_options import TrainOptions
 from data.dataloader import make_dataloader
 
@@ -76,7 +76,7 @@ if(opt.startEpoch != 0):
 
 # test data for demo during trainig
 for i, testdata in enumerate(valid_loader, 0):
-    optical_flow = cal_optical_flow(testdata[0]).to(device)
+    optical_flow = calc_optical_flow(testdata[0]).to(device)
     G_test_demo_input = make_G_input(testdata[0].to(device), optical_flow, opt.nframes)
     break
 
@@ -89,11 +89,11 @@ for epoch in range(opt.startEpoch, opt.epochs):
     for i, data in enumerate(train_loader, 0):
         # train data for demo during trainig
         if (iters == 0):
-            optical_flow = cal_optical_flow(data[0]).to(device)
+            optical_flow = calc_optical_flow(data[0]).to(device)
             G_train_demo_input = make_G_input(data[0].to(device), optical_flow, opt.nframes)
 
         # extract optical flow
-        optical_flow = cal_optical_flow(data[0]).to(device)
+        optical_flow = calc_optical_flow(data[0]).to(device)
 
         # Discriminator train { maximize log(D(x)) + log(1 - D(G(z))) }
         netD.zero_grad()
