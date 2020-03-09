@@ -1,4 +1,4 @@
-# Animating-Arbirary-SkyScene
+# Animating Cloud Images with Flow Style Transfer
 <table border="0">
 <tr>
 <td><img src="https://github.com/Kult0922/Animating-Arbirary-SkyScene/blob/master/figs/driving_video.gif"></td>
