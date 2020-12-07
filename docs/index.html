@@ -1,98 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <!-- Required meta tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-  <title>Animating Cloud Images with Flow Style Transfer</title>
+	<meta charset="UTF-8">
+	<!-- Required meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Animating Cloud Images with Flow Style Transfer</title>
 </head>
 
 <body>
-  <h1>Animating Cloud Images with Flow Style Transfer</h1>
-	<div class="main">
+	<h1>Animating Cloud Images with Flow Style Transfer</h1>
 
-		<h3>Author</h3>
-		Kazuma Kurisaki, Kazuhiko Kawamoto
-		<h3>Code</h3>
-		<a href="https://github.com/kult0922/Animating-Cloud-Images-with-Flow-Style-Transfer">GitHub</a>
+	<h4>Author</h4>
+	Kazuma Kurisaki, Kazuhiko Kawamoto
+	<h4>Code</h4>
+	<a href="https://github.com/kult0922/Animating-Cloud-Images-with-Flow-Style-Transfer">GitHub</a>
 
-		<h2>Motion Transfer</h2>
-		<table class="display" align="center">
-			<tr>
-				<th>source image</th>
-				<th>  </th>
-				<th>driving video</th>
-				<th > </th>
-				<th>generated video</th>
-			</tr>
+	<h2>Motion Transfer</h2>
+	<table class="display" align="center">
+		<tr>
+			<th>source image</th>
+			<th> </th>
+			<th>driving video</th>
+			<th> </th>
+			<th>generated video</th>
+		</tr>
 
-			<tr>
-				<th><img src="./videos/demo/demo1/source_img.png"></th>
-				<th> + </th>
-				<th><img src="./videos/demo/demo1/driving.gif"></th>
-				<th > →  </th>
-				<th><img src="./videos/demo/demo1/geenreate.gif"></th>
-			</tr>
+		<tr>
+			<th><img src="./videos/demo/demo1/source_img.png"></th>
+			<th> <font size="7"> + </font></th>
+			<th><img src="./videos/demo/demo1/driving.gif"></th>
+			<th> <font size="7"> → </th>
+			<th><img src="./videos/demo/demo1/geenreate.gif"></th>
+		</tr>
 
-			<tr>
-				<th><img src="./videos/demo/demo2/source_img.png"></th>
-				<th> + </th>
-				<th><img src="./videos/demo/demo2/driving.gif"></th>
-				<th > →  </th>
-				<th><img src="./videos/demo/demo2/geenreate.gif"></th>
-			</tr>
-		</table>
-
-
-		<table class="display" align="center">
-			<tr>
-			</tr>
-				<th><img src="./videos/figs/driving_video.gif">
-						</br>
-					driving video</th>
-				<th><img src="./videos/figs/generate_videos.gif"></th>
-			</tr>
-		</table>
+		<tr>
+			<th><img src="./videos/demo/demo2/source_img.png"></th>
+			<th> <font size="7"> + </th>
+			<th><img src="./videos/demo/demo2/driving.gif"></th>
+			<th> <font size="7"> → </th>
+			<th><img src="./videos/demo/demo2/geenreate.gif"></th>
+		</tr>
+	</table>
 
 
-		<h2>Reconstruction Result Comparison</h2>
-		<table class="display" align="center">
-			<tr>
-				<th>Ground Trueth</th>
-				<th>MD-GAN</th>
-				<th>Monkey-Net</th>
-				<th>DTV-Net</th>
-				<th >Ours</th>
-			</tr>
+	<table class="display" align="center">
+		<tr>
+		</tr>
+		<th>
+			driving video
+			</br>
+			<img src="./videos/figs/driving_video.gif">
+		</th>
+		<th>source image
+			</br>
+			<img src="./videos/figs/generate_videos.gif"></th>
+		</tr>
+	</table>
 
-			<tr>
-				<th><img src="./videos/reconstruction/GT1/gt1.gif"></th>
-				<th><img src="./videos/reconstruction/mdgan1/mdgan1.gif"></th>
-				<th><img src="./videos/reconstruction/monkey1/monkey1.gif"></th>
-				<th><img src="./videos/reconstruction/DTV1/dtv1.gif"></th>
-				<th><img src="./videos/reconstruction/ours1/ours1.gif"></th>
-			</tr>
 
-			<tr>
-				<th><img src="./videos/reconstruction/GT2/gt2.gif"></th>
-				<th><img src="./videos/reconstruction/mdgan2/mdgan2.gif"></th>
-				<th><img src="./videos/reconstruction/monkey2/monkey2.gif"></th>
-				<th><img src="./videos/reconstruction/DTV2/dtv2.gif"></th>
-				<th><img src="./videos/reconstruction/ours2/ours2.gif"></th>
-			</tr>
+	<h2>Reconstruction Result Comparison</h2>
+	<table class="display" align="center">
+		<tr>
+			<th>Ground Trueth</th>
+			<th>MD-GAN</th>
+			<th>Monkey-Net</th>
+			<th>DTV-Net</th>
+			<th>Ours</th>
+		</tr>
 
-		</table>
+		<tr>
+			<th><img src="./videos/reconstruction/GT1/gt1.gif"></th>
+			<th><img src="./videos/reconstruction/mdgan1/mdgan1.gif"></th>
+			<th><img src="./videos/reconstruction/monkey1/monkey1.gif"></th>
+			<th><img src="./videos/reconstruction/DTV1/dtv1.gif"></th>
+			<th><img src="./videos/reconstruction/ours1/ours1.gif"></th>
+		</tr>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<tr>
+			<th><img src="./videos/reconstruction/GT2/gt2.gif"></th>
+			<th><img src="./videos/reconstruction/mdgan2/mdgan2.gif"></th>
+			<th><img src="./videos/reconstruction/monkey2/monkey2.gif"></th>
+			<th><img src="./videos/reconstruction/DTV2/dtv2.gif"></th>
+			<th><img src="./videos/reconstruction/ours2/ours2.gif"></th>
+		</tr>
+
+	</table>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
 
 	</div>
 </body>
 
 </html>
-
-
