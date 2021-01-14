@@ -37,3 +37,16 @@ python3 test.py --mode transfer --batchSize 8 --checkpoint path/to/checkpoint --
 ```
 python3 test.py --mode reconstruction --batchSize 8 --checkpoint path/to/checkpoint --startEpoch 20 --sourceImage path/to/source_image --drivingVideo path/to/driving_video_dir
 ```
+
+## Publication
+Kazuma Kurisaki and Kazuhiko Kawamoto, Animating Cloud Images With Flow Style Transfer, IEEE Access, Vol.9, pp.3269-3277, 2021.
+
+## Citation
+```
+@ARTICLE{9311211,
+author={K. {Kurisaki} and K. {Kawamoto}},
+journal={IEEE Access},
+title={Animating Cloud Images With Flow Style Transfer},
+year={2021},  volume={9},  number={},  pages={3269-3277},
+doi={10.1109/ACCESS.2020.3048160}}
+```
